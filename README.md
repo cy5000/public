@@ -1,1 +1,1 @@
-Repository for Various Public Examples
+Repository for various public examples
