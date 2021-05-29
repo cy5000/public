@@ -1,7 +1,7 @@
 # Fast Polygon Decomposition for Large Polygons
 
 [Mark Keil's algorithm for decomposing a polygon](https://mpen.ca/406/keil) into convex polygons is elegant because of its simplicity:
-```
+```python
 diags = decomp(poly)
 	min, tmp : EdgeList
 	ndiags : Integer
@@ -19,7 +19,7 @@ diags = decomp(poly)
 ```
 But for large polygons this is very slow.
 So let's skip the optimality and just take the first possible decomposition: 
-```
+```python
 diags = decomp(poly)
 	for each reflex vertex i
 		for every other vertex j
