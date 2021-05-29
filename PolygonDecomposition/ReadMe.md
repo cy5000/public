@@ -16,7 +16,7 @@ diags = decomp(poly)
 					ndiags = tmp.size
 					min += the diagonal i to j
 	return min
-```	
+```
 But for large polygons this is very slow.
 So let's skip the optimality and just take the first possible decomposition: 
 ```
