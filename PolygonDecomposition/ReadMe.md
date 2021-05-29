@@ -29,7 +29,7 @@ diags = decomp(poly)
 				return decomp(left) + decomp(right)			
 	return poly
 ```
-![output2](./demo.out2.svg){width=256px,height=256px}
+![output2](./demo.out2.svg){width=256px}{height=256px}
 This version is not optimal, but it is much faster. However, the subpolygons do not correspond to the natural subregions of the original polygon. Therefore, let's first visit the closest neighbors of our reflection points: 
 ```
 diags = decomp(poly)
