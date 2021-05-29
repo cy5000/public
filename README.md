@@ -21,28 +21,24 @@ But for large polygons this is very slow.
 So let's skip the optimality and just take the first possible decomposition: 
 ```
 diags = decomp(poly)
-	min, tmp : EdgeList
 	for each reflex vertex i
 		for every other vertex j
 			if i can see j
 				left = the polygon given by vertices i to j
 				right = the polygon given by vertices j to i
-				tmp = decomp(left) + decomp(right)
-				return tmp;
-	return min
+				return decomp(left) + decomp(right)			
+	return poly
 ```
 This version is not optimal, but it is much faster. However, the subpolygons do not correspond to the natural subregions of the original polygon. Therefore, let's first visit the closest neighbors of our reflection points: 
 ```
 diags = decomp(poly)
-	min, tmp : EdgeList
 	for each reflex vertex i
 		for every other vertex j sorted by distance to i 
 			if i can see j
 				left = the polygon given by vertices i to j
 				right = the polygon given by vertices j to i
-				tmp = decomp(left) + decomp(right)
-				return tmp;
-	return min
+				return decomp(left) + decomp(right)			
+	return poly
 ```
 The result looks more natural. Some adjacent polygons can still be joined to form larger, still convex polygons:
 
