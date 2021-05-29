@@ -22,7 +22,6 @@ So let's skip the optimality and just take the first possible decomposition:
 ```
 diags = decomp(poly)
 	min, tmp : EdgeList
-	ndiags : Integer
 	for each reflex vertex i
 		for every other vertex j
 			if i can see j
@@ -36,7 +35,6 @@ This version is not optimal, but it is much faster. However, the subpolygons do 
 ```
 diags = decomp(poly)
 	min, tmp : EdgeList
-	ndiags : Integer
 	for each reflex vertex i
 		for every other vertex j sorted by distance to i 
 			if i can see j
