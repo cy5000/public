@@ -29,7 +29,7 @@ diags = decomp(poly)
 				return decomp(left) + decomp(right)			
 	return poly
 ```
-<img src="./demo.out2.svg" width="256" height="256" >
+<img src="./demo.out2.svg" width="384" height="384" >
 This version is not optimal, but it is much faster. However, the subpolygons do not correspond to the natural subregions of the original polygon. Therefore, let's first visit the closest neighbors of our reflection points:
 ```
 diags = decomp(poly)
@@ -41,7 +41,7 @@ diags = decomp(poly)
 				return decomp(left) + decomp(right)			
 	return poly
 ```
-<img src="./demo.out3.svg" width=256 height=256 />
+<img src="./demo.out3.svg" width=384 height=384 />
 The result looks more natural. Some adjacent polygons can still be joined to form larger, still convex polygons:
-<img src="./demo.out4.svg" width=256 height=256 />
+<img src="./demo.out4.svg" width=384 height=384 />
 This gives us a quick and easy decomposition that is good enough for most applications.
