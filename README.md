@@ -1,4 +1,4 @@
-#Fast Polygon decomposition for big polygons
+# Fast Polygon decomposition for big polygons
 
 Mark Keil's algorithm for decomposing a polygon into convex polygons is elegant because of its simplicity:
 ```
