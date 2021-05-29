@@ -1,6 +1,6 @@
 # Fast Polygon Decomposition for Large Polygons
 
-[Mark Keil's algorithm for decomposing a polygon](https://mpen.ca/406/keil) into convex polygons is elegant because of its simplicity:
+[Mark Keil's algorithm for decomposing a polygon](https://mpen.ca/406/keil) into convex polygons is simple and optimal:
 ```python
 diags = decomp(poly)
 	min, tmp : EdgeList
