@@ -1,7 +1,7 @@
-Fast Polygon decomposition for big polygons
+#Fast Polygon decomposition for big polygons
 
-Mark Keil's Algorithm to decompose a polygon into convex polygons is nice because of its simplicity:
-
+Mark Keil's algorithm for decomposing a polygon into convex polygons is elegant because of its simplicity:
+```
 diags = decomp(poly)
 	min, tmp : EdgeList
 	ndiags : Integer
@@ -16,10 +16,10 @@ diags = decomp(poly)
 					ndiags = tmp.size
 					min += the diagonal i to j
 	return min
-	
-But for big polygon, it's very slow.
-So let's skip optimality and just take the first possible version:
-
+```	
+But for large polygons this is very slow.
+So let's skip the optimality and just take the first possible decomposition: 
+```
 diags = decomp(poly)
 	min, tmp : EdgeList
 	ndiags : Integer
@@ -31,10 +31,9 @@ diags = decomp(poly)
 				tmp = decomp(left) + decomp(right)
 				return tmp;
 	return min
-
-We get a fast result, although subpolygons do not address natural subregions of the original polygons. 
-So let's try close neighbours of our reflex vertices first: 
-
+```
+This version is not optimal, but it is much faster. However, the subpolygons do not correspond to the natural subregions of the original polygon. Therefore, let's first visit the closest neighbors of our reflection points: 
+```
 diags = decomp(poly)
 	min, tmp : EdgeList
 	ndiags : Integer
@@ -46,6 +45,7 @@ diags = decomp(poly)
 				tmp = decomp(left) + decomp(right)
 				return tmp;
 	return min
+```
+The result looks more natural. Some adjacent polygons can still be joined to form larger, still convex polygons:
 
-The result looks more natural. Although we get some adjacent polygons which might be merged together to bigger, still convex polygons.
-We end up with something which seems to be good and fast enough for most applications:
+This gives us a quick and easy decomposition that is good enough for most applications.
