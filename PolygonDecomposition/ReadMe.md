@@ -29,9 +29,12 @@ diags = decomp(poly)
 				return decomp(left) + decomp(right)			
 	return poly
 ```
+
 <img src="./demo.out2.svg" width="384" height="384" >
+
 This version is not optimal, but it is much faster. However, the subpolygons do not correspond to the natural subregions of the original polygon. Therefore, let's first visit the closest neighbors of our reflection points:
-```
+
+```python
 diags = decomp(poly)
 	for each reflex vertex i
 		for every other vertex j sorted by distance to i 
