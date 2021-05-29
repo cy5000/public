@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<svg viewBox = '46 -3 186 248' idth = '128' height = '128' xmlns = 'http://www.w3.org/2000/svg'>
+<svg viewBox = '46 -3 186 248' idth = '256' height = '256' xmlns = 'http://www.w3.org/2000/svg'>
 <polygon points = '137,31.4375 138.375,29.625 143,27.484375 ' fill='red' stroke='black' stroke-width='0.2'/>
 <polygon points = '158.03125,36.484375 161.0546875,41.453125 161.5,44.25 ' fill='red' stroke='black' stroke-width='0.2'/>
 <polygon points = '163.25,109.5 167.5,107.96875 170.25,107.5 ' fill='red' stroke='black' stroke-width='0.2'/>
